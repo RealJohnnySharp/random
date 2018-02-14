@@ -9,9 +9,9 @@ int main() {
 	cin >> vHeight;
 
 	// Height
-	for (int row = 0; row < vHeight; row++) {
+	for (int row = 1; row <= vHeight; row++) {
 		// Width
-		for (int col = 0; col < vHeight*2; col++) {
+		for (int col = 1; col <= vHeight*2; col++) {
 			// - if the row# and col# match or the row# matches the difference of
 			// 	 the total columns and the current column (the current columns'
 			//	 opposite in the current row), and not the last row
@@ -19,7 +19,7 @@ int main() {
 			//	 excluded from the earlier conditions
 			//
 			// If these conditions are met, * is printed; otherwise a space.
-			if (((row == col || row == ((vHeight - 1) * 2) - col) && row != vHeight - 1) || row == col) {
+			if (((row == col || row == ((vHeight) * 2) - col) && row != vHeight) || row == col) {
 				cout << "*";
 			} else {
 				cout << " ";
